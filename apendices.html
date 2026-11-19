@@ -1,0 +1,921 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Introdução passo a passo ao framework web [Symfony]">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/br-symfony-sept-2026/apendices.html">
+      
+      
+        <link rel="prev" href="conclusao.html">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>13. Apêndices - Introdução passo a passo ao framework web [Symfony]</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "Introdução passo a passo ao framework web [Symfony]";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#13-apendices" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Introdução passo a passo ao framework web [Symfony]" class="md-header__button md-logo" aria-label="Introdução passo a passo ao framework web [Symfony]" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introdução passo a passo ao framework web [Symfony]
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              13. Apêndices
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Alternar para o modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Alternar para o modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Alternar para o modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Alternar para o modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/br-symfony-sept-2026" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Introdução passo a passo ao framework web [Symfony]" class="md-nav__button md-logo" aria-label="Introdução passo a passo ao framework web [Symfony]" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introdução passo a passo ao framework web [Symfony]
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/br-symfony-sept-2026" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bem-vindo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introducao.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="actions-roteamento-respostas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Actions, roteamento, respostas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="o-modelo-da-action.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. O modelo da action
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="a-view-e-seu-modelo.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. A view e seu modelo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="internacionalizacao.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Internacionalização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="escopos-de-dados.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Escopos de dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="o-ciclo-de-vida-de-uma-requisicao.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. O ciclo de vida de uma requisição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="autenticacao-e-autorizacao.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Autenticação e autorização
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="arquitetura-em-camadas-e-acesso-a-dados.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Arquitetura em camadas e acesso a dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="conclusao-provisoria.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Conclusão provisória
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="estudo-de-caso-a-aplicacao-rdvmedecins.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Estudo de caso: a aplicação RdvMedecins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="conclusao.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Conclusão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Apêndices
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="apendices.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Apêndices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#131-instalacao-do-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1. Instalação do PHP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#132-composer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2. Composer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#133-instalacao-do-visual-studio-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3. Instalação do Visual Studio Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#134-instalacao-do-mysql-com-o-laragon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4. Instalação do MySQL com o Laragon
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#135-instalacao-do-curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.5. Instalação do curl
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#136-a-ferramenta-symfony" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.6. A ferramenta symfony
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="13-apendices">13. <span style="color: #2e74b5">Apêndices</span></h1>
+<h2 id="131-instalacao-do-php">13.1. <span style="color: #2e74b5">Instalação do PHP</span></h2>
+<p>Os exemplos e o estudo de caso exigem o <em>[PHP]</em> <strong>8.4</strong> ou posterior (o <em>[Symfony]</em> 8 o exige), com as extensões <strong><em>[intl]</em></strong> (formatação de números e datas, exemplo 16, e mensagens ICU, exemplo 22), <strong><em>[pdo_mysql]</em></strong> (acesso ao <em>[MySQL]</em>, exemplo 28 e estudo de caso), <strong><em>[mbstring],</em></strong> e <strong><em>[openssl]</em></strong>. Foram testados com a versão 8.4.</p>
+<p>No <em>[Windows]</em>, o mais simples é o <em>[Laragon]</em> (<a href="https://laragon.org/"><u><span style="color: #0563c1">laragon.org</span></u></a>), que instala o <em>[PHP]</em>, o <em>[Composer]</em>, um servidor <em>[MySQL]</em> e a ferramenta de administração <em>[HeidiSQL]</em>. Se a versão fornecida do <em>[PHP]</em> for anterior à 8.4, baixe uma versão mais recente em <a href="https://windows.php.net/download/"><u><span style="color: #0563c1">windows.php.net/download</span></u></a> (versão <em>Thread Safe</em> , arquivo <strong><em>[.zip]</em></strong>) e extraia-a na pasta <strong><em>[bin\php]</em></strong> dentro do <em>[Laragon]</em>; o menu PHP / Version do <em>[Laragon]</em> permite então selecioná-la. O menu PHP / Extensions ativa uma extensão com um único clique (<strong><em>[intl]</em></strong>, <strong><em>[pdo_mysql]</em></strong>). O terminal do <em>[Laragon]</em> (botão Terminal) aceita os comandos <strong><em>[php]</em></strong>, <strong><em>[composer]</em></strong> e <strong><em>[mysql]</em></strong>.</p>
+<p>Sem o <em>[Laragon]</em>, extraia o arquivo do <em>[PHP]</em> em uma pasta (<strong><em>[C:\php]</em></strong>), adicione essa pasta à variável de ambiente <strong><em>[Path]</em></strong>, depois crie o arquivo de configuração <strong><em>[php.ini]</em></strong> copiando o <strong><em>[php.ini-development]</em></strong> e remova o ponto e vírgula que comenta as linhas das extensões necessárias:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="na">extension</span><span class="o">=</span><span class="s">intl</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="na">extension</span><span class="o">=</span><span class="s">mbstring</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="na">extension</span><span class="o">=</span><span class="s">openssl</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="na">extension</span><span class="o">=</span><span class="s">pdo_mysql</span>
+</code></pre></div></td></tr></table></div>
+<p>No <em>[macOS]</em>, o gerenciador de pacotes <em>[Homebrew]</em> instala o <em>[PHP]</em> e suas extensões padrão: <strong><em>[brew install php]</em></strong>. No <em>[Linux]</em> (<em>[Ubuntu]</em>), a versão fornecida pela distribuição costuma ser mais antiga; o repositório <strong><em>[ppa:ondrej/php]</em></strong> oferece as versões mais recentes:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>sudo add-apt-repository ppa:ondrej/php
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>sudo apt install php8.4-cli php8.4-intl php8.4-mbstring php8.4-mysql php8.4-xml php8.4-curl php8.4-zip
+</code></pre></div></td></tr></table></div>
+<p>Verifique a instalação em um novo console:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>php -v
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>php -m
+</code></pre></div></td></tr></table></div>
+<p>O primeiro comando deve exibir um número de versão igual ou superior a 8.4 (por exemplo, <strong><em>[PHP 8.4.12]</em></strong>); o segundo lista as extensões carregadas, entre elas <strong><em>[intl]</em></strong> e <strong><em>[pdo_mysql]</em></strong>. O comando <strong><em>[php --ini]</em></strong> indica qual arquivo, <strong><em>[php.ini],</em></strong> está sendo usado.</p>
+<h2 id="132-composer">13.2. <span style="color: #2e74b5">Composer</span></h2>
+<p><em>[Composer]</em> é o gerenciador de bibliotecas do <em>[PHP]</em> (<a href="https://getcomposer.org/"><u><span style="color: #0563c1">getcomposer.org</span></u></a>). Ele é fornecido pelo <em>[Laragon]</em>; para o <em>[Windows]</em>, mas sem o <em>[Laragon]</em>, usa-se seu instalador (<strong><em>[Composer-Setup.exe]</em></strong>); para o <em>[macOS]</em>, use <strong><em>[brew install composer]</em></strong>; para o <em>[Linux]</em>, siga as instruções da página <a href="https://getcomposer.org/download/"><u><span style="color: #0563c1">getcomposer.org/download</span></u></a>. Verifique a instalação:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>composer -V
+</code></pre></div></td></tr></table></div>
+<p>Comandos úteis em uma pasta de projeto (aquela que contém o <strong><em>[composer.json]</em></strong>):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>composer install              # instala as bibliotecas do projeto (pasta vendor)
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>composer show                 # as bibliotecas instaladas
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>composer update               # passa para as versões mais recentes permitidas por composer.json
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>composer require name/package # adiciona uma biblioteca ao projeto
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>composer dump-autoload        # reconstrói o carregador de classes (após adicionar uma pasta de classes)
+</code></pre></div></td></tr></table></div>
+<p><em>[Composer]</em> baixa as bibliotecas do repositório <em>[Packagist]</em> (<a href="https://packagist.org/"><u><span style="color: #0563c1">packagist.org</span></u></a>): é necessária uma conexão com a Internet durante a instalação. Se você estiver atrás de um proxy corporativo, especifique o proxy por meio das variáveis de ambiente <strong><em>[HTTP_PROXY]</em></strong> e <strong><em>[HTTPS_PROXY]</em></strong>. A pasta <strong><em>[vendor]</em></strong> não é copiada de uma máquina para outra (ela pode conter caminhos absolutos e é volumosa); ela é recriada com <strong><em>[composer install]</em></strong>. Por isso ela não está incluída nos materiais do curso. A pasta [examples] contém seu próprio <strong><em>[vendor]</em></strong>, compartilhado pelos 28 exemplos; o estudo de caso tem o seu.</p>
+<p>O estudo de caso usa o componente <em>[Runtime]</em> do <em>[Symfony]</em>, que também é um <strong>plugin</strong> do <em>[Composer]</em>: é esse componente que gera o arquivo <strong><em>[vendor/autoload_runtime.php]</em></strong> lido por <strong><em>[public/index.php]</em></strong>. <em>[Composer]</em> pede permissão para executar um plugin; o arquivo <strong><em>[composer.json]</em></strong> da aplicação a concede (seção <strong><em>[allow-plugins]</em></strong>). No <em>[Linux]</em>, o <em>[Composer]</em> se recusa a executar plugins quando iniciado pela conta <strong><em>[root]</em></strong>, a menos que a variável de ambiente <strong><em>[COMPOSER_ALLOW_SUPERUSER]</em></strong> esteja definida como <strong><em>[1]</em></strong>: sem ela, o arquivo <strong><em>[autoload_runtime.php]</em></strong> estaria ausente (veja “Problemas comuns” no estudo de caso). É melhor não trabalhar com a conta <strong><em>[root]</em></strong>.</p>
+<h2 id="133-instalacao-do-visual-studio-code">13.3. <span style="color: #2e74b5">Instalação do Visual Studio Code</span></h2>
+<p><em>[Visual Studio Code]</em> é baixado em <a href="https://code.visualstudio.com/"><u><span style="color: #0563c1">code.visualstudio.com</span></u></a>. Adicione três extensões (menu View / Extensions):</p>
+<ul>
+<li><strong>PHP Intelephense</strong>: autocompletar código, navegação pelo código (inclusive o código do <em>[Symfony]</em>, localizado na pasta <strong><em>[vendor]</em></strong>) e relatório de erros;</li>
+<li><strong>Twig Language 2</strong>: realce de sintaxe e autocompletar para as views <em>[Twig]</em> (arquivos <strong><em>[.html.twig]</em></strong>);</li>
+<li><strong>YAML</strong> (da <em>[Red Hat]</em>): realce de sintaxe e validação dos arquivos de configuração (<strong><em>[config/packages/*.yaml]</em></strong>) e dos dicionários (<strong><em>[translations/*.yaml]</em></strong>).</li>
+</ul>
+<p>A extensão <strong>PHP Debug</strong> permite executar o código passo a passo usando o depurador <em>[Xdebug]</em> (uma extensão do <em>[PHP]</em>, a ser instalada separadamente: <a href="https://xdebug.org/docs/install"><u><span style="color: #0563c1">xdebug.org</span></u></a>).</p>
+<p>Abra a pasta <strong><em>[examples]</em></strong> ou a pasta do estudo de caso (menu File / Open Folder). O terminal integrado (menu Terminal / New Terminal) permite iniciar as aplicações e executar os comandos <strong><em>[php bin/console ...]</em></strong> sem sair do editor.</p>
+<h2 id="134-instalacao-do-mysql-com-o-laragon">13.4. <span style="color: #2e74b5">Instalação do MySQL com o Laragon</span></h2>
+<p><em>[Laragon]</em> instala um servidor <em>[MySQL]</em> pronto para uso no <em>[Windows]</em>, junto com a ferramenta de administração <em>[HeidiSQL]</em>. Após a instalação:</p>
+<ul>
+<li>o botão &quot;Start All&quot; inicia o servidor <em>[MySQL]</em> na porta 3306;</li>
+<li>o usuário <strong><em>[root]</em></strong> não tem senha: esses são os valores da variável <strong><em>[DATABASE_URL]</em></strong> dos arquivos <strong><em>[.env]</em></strong> do exemplo 28 e do estudo de caso (<strong><em>[mysql://root:@127.0.0.1:3306/...]</em></strong>);</li>
+<li>o botão Database abre o <em>[HeidiSQL]</em>, onde o menu File / Run File SQL executa os scripts <strong><em>[dbpersons.sql]</em></strong> (exemplo 28) e <strong><em>[dbrdvmedecins2.sql]</em></strong> (estudo de caso).</li>
+</ul>
+<p>No <em>[Linux]</em> ou no <em>[macOS]</em>, instale o <em>[MySQL]</em> ou o <em>[MariaDB]</em> usando o gerenciador de pacotes do sistema e execute os scripts com o cliente de linha de comando <strong><em>[mysql]</em></strong>. O driver <strong><em>[pdo_mysql]</em></strong> funciona com ambos sem nenhuma configuração. No <em>[Linux]</em>, a conta <strong><em>[root]</em></strong> do <em>[MariaDB]</em> costuma ser configurada para entrar apenas pela conta do sistema <strong><em>[root]</em></strong> (<strong><em>[sudo mysql]</em></strong>): cria-se então um usuário para as aplicações, que é indicado na variável <strong><em>[DATABASE_URL]</em></strong> do arquivo <strong><em>[.env]</em></strong> (<strong><em>[mysql://course:course@127.0.0.1:3306/...]</em></strong>) de cada uma:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>sudo mysql -e "CREATE USER 'course'@'localhost' IDENTIFIED BY 'course'; GRANT ALL ON *.* TO 'course'@'localhost';"
+</code></pre></div></td></tr></table></div>
+<p>Com o <em>[MariaDB]</em>, também se indica sua versão na variável <strong><em>[DATABASE_URL]</em></strong> (<strong><em>[serverVersion=10.11.2-MariaDB]</em></strong> em vez de <strong><em>[serverVersion=8.0.32]</em></strong>, por exemplo): <em>[Doctrine]</em> adapta o SQL que escreve ao banco de dados utilizado.</p>
+<h2 id="135-instalacao-do-curl">13.5. <span style="color: #2e74b5">Instalação do curl</span></h2>
+<p><em>[curl]</em> já vem incluído no <em>[Windows]</em> 10 e 11, no <em>[macOS],</em> e na maioria das distribuições <em>[Linux]</em>. No <em>[PowerShell]</em>, é preciso digitar <strong><em>[curl.exe]</em></strong>, e não <strong><em>[curl]</em></strong>: nas versões mais antigas do <em>[PowerShell]</em>, <strong><em>[curl]</em></strong> é um alias de outro comando (<strong><em>[Invoke-WebRequest]</em></strong>), que tem opções diferentes. No prompt de comando do <em>[Windows]</em> (<strong><em>[cmd]</em></strong>), as aspas de uma string JSON são escritas como <strong><em>[\&quot;]</em></strong> (exemplo 11), e uma URL que contenha <strong><em>[&amp;]</em></strong> deve ser colocada entre aspas duplas.</p>
+<h2 id="136-a-ferramenta-symfony">13.6. <span style="color: #2e74b5">A ferramenta symfony</span></h2>
+<p><em>[Symfony]</em> oferece uma ferramenta de linha de comando, o programa <strong><em>[symfony]</em></strong> (<em>Symfony CLI</em>), que não é necessária para acompanhar este documento, mas é mencionada ao longo da documentação. Ela é instalada seguindo as instruções da página <a href="https://symfony.com/download"><u><span style="color: #0563c1">symfony.com/download</span></u></a>: no <em>[Windows]</em>, com o gerenciador de pacotes <em>[Scoop]</em> (<strong><em>[scoop install symfony-cli]</em></strong>); no <em>[macOS]</em>, com o <em>[Homebrew]</em> (<strong><em>[brew install symfony-cli/tap/symfony-cli]</em></strong>); no <em>[Linux]</em>, com o gerenciador de pacotes do sistema. Os comandos mais úteis:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>symfony check:requirements      # a configuração do PHP é adequada para o Symfony?
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>symfony new my-project --webapp # um novo projeto completo (veja a introdução)
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>symfony server:start            # um servidor de desenvolvimento (http://127.0.0.1:8000)
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>symfony console debug:router    # equivalente a php bin/console debug:router
+</code></pre></div></td></tr></table></div>
+<p>Seu servidor de desenvolvimento faz o mesmo que <strong><em>[php -S localhost:8000 -t public]</em></strong>, com algumas vantagens: ele localiza sozinho a pasta <strong><em>[public]</em></strong>, pode servir o site em HTTPS (após <strong><em>[symfony server:ca:install]</em></strong>), pode rodar em segundo plano (<strong><em>[symfony server:start -d]</em></strong>, depois <strong><em>[symfony server:stop]</em></strong>) e seleciona a versão do <em>[PHP]</em> do projeto quando várias versões estão instaladas. O servidor embutido no <em>[PHP]</em>, usado neste documento, tem a vantagem de não exigir instalação.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        Este tutorial, escrito pela IA <strong>Claude</strong>, da Anthropic, a pedido de <strong>Serge Tahé</strong>, é disponibilizado ao público sob os termos da licença
+        <em>Creative Commons Atribuição – Uso Não Comercial –
+        Compartilha Igual 3.0 Não Adaptada</em>.
+
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
